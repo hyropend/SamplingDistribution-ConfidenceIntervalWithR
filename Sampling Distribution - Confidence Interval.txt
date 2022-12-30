@@ -1,0 +1,28 @@
+n <- 10000
+success <- 0
+for (i in 1:n){
+  x <- runif(25,0,240)
+  xbar <- mean(x)
+  if (92.84 <= xbar & xbar <= 147.16){
+    success <- success + 1}
+  }
+success/n
+
+
+
+
+n <- 1000000
+x <- c()
+S <- 0
+for (i in 1:n){
+  x <- 240*runif(1)
+  S <- S + (x - 120)^2
+  }
+sigma <- sqrt(S/n)
+sigma
+
+n <- 1000000
+x <- runif(n,0,240)
+sigma <- sqrt(sum((x - 120)^2)/n)
+sigma
+
